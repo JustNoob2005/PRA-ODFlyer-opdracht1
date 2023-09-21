@@ -4,6 +4,11 @@
     font-family: Fellix,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-decoration: none;
     color: black;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4{
+    color: mediumblue;
 }
 
 header{
@@ -21,6 +26,7 @@ header nav{
 nav a{
     font-size: larger;
     padding-left: 3vw;
+    color: mediumblue;
 }
 
 nav a:hover{
@@ -36,8 +42,10 @@ nav a:hover{
     margin-bottom: 5vh;
 }
 
-h2{
-    margin: 0 auto;
+.centered{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5vh;
 }
 
 #animatedEl{
@@ -46,6 +54,12 @@ h2{
 
 .subexpl{
     padding-top: 5vh;
+}
+
+.subject-expl{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2vh;
 }
 
 .teachers{
@@ -89,6 +103,10 @@ h2{
     align-items: center;
 }
 
+.centered h3{
+    padding-top: 5vh;
+}
+
 .teacher img{
     border-radius: 100%;
 }
@@ -108,6 +126,44 @@ h2{
 
 
 @media only screen and (max-aspect-ratio:1.3/2) {
+
+    .speedup{
+        display: grid;
+        grid-template-rows: auto;
+        padding: 5vh;
+        background-color: lightblue;
+    }
+
+    .speedup-img{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 3vh;
+    }
+
+    .speedup-expl{
+        grid-row: 2;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .speedup img{
+        grid-row: 1;
+    }
+
+    .schedule{
+        grid-template-columns: 0;
+        grid-template-rows: auto;
+    }
+
+    .schedule-img img{
+        width: 80vw;
+    }
+
+    .schedule-expl{
+        grid-row: 2;
+    }
 
     .teachers{
         grid-template-columns: 1fr 1fr;
@@ -130,6 +186,17 @@ h2{
     border-radius: 1vw;
 }
 
+a img{
+    width: 2vw;
+}
+
+footer{
+    padding: 2vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-around;
+}
+
 .info{
     padding: 1vw;
     background-color: rgba(255, 255, 47, 0.9);
@@ -137,7 +204,7 @@ h2{
 }
 
 .info p{
-    font-size: small;   
+    font-size: medium;   
 }
 
 .info:hover{
@@ -158,4 +225,40 @@ h2{
 
 .img:hover{
     transform: scale(1.05);
+}
+
+.subject{
+    border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+}
+
+.border{
+    margin: 5vh;
+    background-color: yellow;
+    border-radius: 2vw;
+    padding: 1vw 1vw 5vw 1vw;
+}
+
+@media only screen and (min-aspect-ratio:1.3/2){
+    .speedup{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5vh;
+        background-color: lightblue;
+    }
+
+    .speedup-expl{
+        grid-column: 1;
+    }
+    
+    .speedup-img{
+        grid-column: 2;
+    }
+}
+
+.speedup-expl h3{
+    border-bottom: solid 2px;
+}
+
+.speedup img{
+    width: 40vw;
 }
